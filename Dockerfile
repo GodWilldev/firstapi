@@ -1,4 +1,4 @@
-FROM java:17
+FROM openjdk:8
 
 EXPOSE 9003
 
