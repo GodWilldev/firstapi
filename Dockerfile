@@ -1,7 +1,7 @@
-FROM java:8
+FROM java:17
 
-EXPOSE 8081
+EXPOSE 9003
 
 ADD target/firstapi.jar firstapi.jar
 
-ENTRYPOINT ["java", "-jar"]
+ENTRYPOINT ["java", "-jar", "/firstapi.jar"]
