@@ -1,7 +1,7 @@
 FROM openjdk:17
 
-EXPOSE 9003
+EXPOSE 8080
 
-ADD target/firstapi.jar firstapi.jar
+ADD target/springboot-crud-k8s.jar springboot-crud-k8s.jar
 
-ENTRYPOINT ["java", "-jar", "/firstapi.jar"]
+ENTRYPOINT ["java", "-jar", "/springboot-crud-k8s.jar"]

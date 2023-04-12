@@ -32,6 +32,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -62,7 +67,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>firstapi</finalName>
+		<finalName>springboot-crud-k8s</finalName>
 	</build>
 
 </project>
