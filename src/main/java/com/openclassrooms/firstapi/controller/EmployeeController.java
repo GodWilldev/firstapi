@@ -22,7 +22,7 @@ public class EmployeeController {
 
     @GetMapping("/test-docker")
     public String getData() {
-        return "Hello Docker from Spring boot api 2";
+        return "Hello DigitalOcean cluster from Spring boot api 2";
     }
 
     /**

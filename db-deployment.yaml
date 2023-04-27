@@ -44,8 +44,7 @@ spec:
               value: root
 
             - name: MYSQL_DATABASE # Setting Database Name from a 'ConfigMap'
-              value: db_employees
-
+              value: db_employee
 
           ports:
             - containerPort: 3306
