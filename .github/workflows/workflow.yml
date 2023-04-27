@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Install doctl  #it is a cli used to interact with dogotal ocean services
+      - name: Install doctl  #it is a cli used to interact with DigitalOcean ocean services
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
@@ -49,9 +49,9 @@ jobs:
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ secrets.CLUSTER_NAME }}
 
       - name: Pull mysql image from docker and deploy it to digital ocean Kubernetes cluster
-        run: kubectl apply -f db-deployment.yaml
+        run: kubectl apply -f kubernetes/db-deployment.yaml
       - name: Deploy application to DigitalOcean Kubernetes cluster
-        run: kubectl apply -f app-deployment.yaml
+        run: kubectl apply -f kubernetes/app-deployment.yaml
 
       - name: get the address of kubernetes nodes
         run: |
