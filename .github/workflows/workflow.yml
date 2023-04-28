@@ -51,8 +51,8 @@ jobs:
       - name: Pull mysql image from docker and deploy it to digital ocean Kubernetes cluster
         #before that we must delete previous deployment and service
         run: |
-          kubectl delete deployment firstapi-deployment
-          kubectl delete service firstapi-svc
+          #kubectl delete deployment firstapi-deployment
+          #kubectl delete service firstapi-svc
           kubectl apply -f kubernetes/db-deployment.yaml
       - name: Deploy application to DigitalOcean Kubernetes cluster
         run: kubectl apply -f kubernetes/app-deployment.yaml
